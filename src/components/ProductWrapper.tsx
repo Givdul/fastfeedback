@@ -1,4 +1,3 @@
-// src/components/ProductWrapper.tsx
 import { ReactElement, useState } from 'react';
 
 export interface Product {
@@ -51,7 +50,7 @@ export function ProductWrapper({ product, onRemove, isEven, onInteraction }: Pro
                 </div>
             </div>
 
-            <div className="flex">
+            <div className="flex justify-items-center">
                 <button
                     type="button"
                     onClick={handleStarClick}
@@ -75,7 +74,7 @@ export function ProductWrapper({ product, onRemove, isEven, onInteraction }: Pro
                 <button
                     type="button"
                     onClick={handleDismiss}
-                    className="p-2 text-gray-400 hover:text-gray-500 cursor-pointer rounded-full hover:bg-gray-100 ml-2 transition-colors"
+                    className="p-2 text-gray-400 hover:text-gray-500 cursor-pointer rounded-full ml-2 transition-colors"
                 >
                     <i className="fas fa-times text-xl"></i>
                 </button>

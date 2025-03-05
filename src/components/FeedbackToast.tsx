@@ -1,4 +1,3 @@
-// src/components/FeedbackToast.tsx
 import { ReactElement, useState, useEffect } from 'react';
 import { Product, ProductWrapper } from './ProductWrapper';
 
