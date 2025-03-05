@@ -33,12 +33,12 @@ export function FeedbackToast({ products, onRemoveProduct }: FeedbackToastProps)
 
             {/* Toast wrapper */}
             <div className={`bg-white rounded-md p-8 w-full transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
-                <h2 className="text-2xl text-black font-bold">Do recommend your products?</h2>
+                <h2 className="text-2xl text-black font-bold">Do you recommend these products?</h2>
                 <div className="relative inline-block mt-1 mb-3">
           <span className="text-xs text-gray-400 cursor-help underline flex items-center gap-1 group">
             Why am I seeing this? <i className="fas fa-question-circle text-gray-400"></i>
             <div className="invisible group-hover:visible absolute left-0 top-full z-10 bg-gray-800 text-white text-xs rounded p-2 w-64 transition-opacity duration-300">
-              You are seeing this because you have recently purchased and own these products.
+              You are seeing this because you have recently purchased and own these products and we would like to know if you like them!
             </div>
           </span>
                 </div>

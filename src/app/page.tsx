@@ -41,7 +41,7 @@ export default function Home(): ReactElement {
     };
 
     return (
-        <div className="flex flex-col items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        <div className="max-w-prose m-auto flex flex-col items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
             <div className="mb-4">
                 <h1 className="text-3xl font-bold mb-2">Fast Feedback</h1>
                 <p className="mb-3">Low effort product recommendations based on users&#39; actual purchased products.</p>
@@ -52,12 +52,16 @@ export default function Home(): ReactElement {
                         <li>We get data from the customers that have purchased a product</li>
                         <li>We can display engaging metrics for customers that are thinking about purchasing a specific product</li>
                     </ol>
-
                     <p className="mb-2">It should display based on these conditions:</p>
-                    <p>A product must have been purchased, delivered and not returned. This way we make sure that we are asking users who have actually kept and used a product.</p>
+                    <ol className="list-decimal ml-6 mb-3">
+                        <li>The customer has purchased the product</li>
+                        <li>It has been delivered and received</li>
+                        <li>It has not been returned</li>
+                        <li>Its not eligible for return</li>
+                    </ol>
                 </div>
             </div>
-
+            <h2 className="font-bold text-xl">Try it out, recommend some products!</h2>
             <FeedbackToast
                 products={products}
                 onRemoveProduct={handleRemoveProduct}
