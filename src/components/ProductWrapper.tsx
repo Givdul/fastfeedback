@@ -50,7 +50,7 @@ export function ProductWrapper({ product, onRemove, isEven, onInteraction }: Pro
                 </div>
             </div>
 
-            <div className="flex justify-items-center">
+            <div className="flex">
                 <button
                     type="button"
                     onClick={handleStarClick}
