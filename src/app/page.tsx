@@ -20,24 +20,26 @@ const initialProducts = [
     {
         id: 2,
         image: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        name: "Smartphone X",
-        brand: "Oranges"
+        name: "SASLDKJFJOIJE23443234",
+        brand: "Sony"
     },
     {
         id: 3,
         image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         name: "Wireless Headphones",
-        brand: "Beats"
+        brand: "Beats by Dwight"
     }
 ];
 
 export default function Home(): ReactElement {
     const [products, setProducts] = useState<Product[]>(initialProducts);
     const [feedback, setFeedback] = useState<Feedback[]>([]);
+    const [hasInteracted, setHasInteracted] = useState(false);
 
     const handleRemoveProduct = (id: number, userFeedback: 'like' | 'dismiss') => {
         setProducts(products.filter(product => product.id !== id));
         setFeedback([...feedback, { productId: id, feedback: userFeedback }]);
+        setHasInteracted(true);
     };
 
     return (
@@ -61,7 +63,9 @@ export default function Home(): ReactElement {
                     </ol>
                 </div>
             </div>
-            <h2 className="font-bold text-xl">Try it out, recommend some products!</h2>
+            <h2 className={`font-bold text-xl transition-opacity duration-500 ${hasInteracted ? 'opacity-0' : 'opacity-100'}`}>
+                Try it out, recommend some products!
+            </h2>
             <FeedbackToast
                 products={products}
                 onRemoveProduct={handleRemoveProduct}
