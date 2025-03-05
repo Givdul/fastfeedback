@@ -1,8 +1,8 @@
 "use client";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { ReactElement, useState } from 'react';
-import { Product } from '../components/ProductWrapper';
-import { FeedbackToast } from '../components/FeedbackToast';
+import { Product } from '@/components/ProductWrapper';
+import { FeedbackToast } from '@/components/FeedbackToast';
 
 interface Feedback {
     productId: number;
