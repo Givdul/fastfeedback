@@ -210,7 +210,7 @@ export function FeedbackToast({ products, onRemoveProduct }: FeedbackToastProps)
             </div>
 
             {/* Toast wrapper */}
-            <div className={`bg-white rounded-md p-8 w-full transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
+            <div className={`bg-white rounded-md p-4 lg:p-8 w-full transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
                 <h2 className="text-2xl text-black font-bold">Do you recommend these products?</h2>
                 <div className="relative inline-block mt-1 mb-3">
                     <span className="text-xs text-gray-400 cursor-help underline flex items-center gap-1 group">

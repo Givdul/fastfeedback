@@ -32,8 +32,8 @@ export function ProductWrapper({ product, onRemove, isEven, onInteraction }: Pro
     };
 
     return (
-        <div className={`flex items-center p-3 ${isEven ? 'bg-gray-50' : ''}`}>
-            <div className="h-16 w-16 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+        <div className={`grid grid-cols-[auto_1fr_auto] gap-4 items-center p-3 ${isEven ? 'bg-gray-50' : ''}`}>
+            <div className="h-16 w-16 overflow-hidden rounded-md border border-gray-200">
                 <img
                     src={product.image}
                     alt={product.name}
@@ -41,13 +41,11 @@ export function ProductWrapper({ product, onRemove, isEven, onInteraction }: Pro
                 />
             </div>
 
-            <div className="ml-4 flex flex-1 flex-col">
-                <div>
-                    <div className="flex justify-between text-base text-black">
-                        <h3>{product.name}</h3>
-                    </div>
-                    <p className="mt-1 text-sm text-gray-500">{product.brand}</p>
-                </div>
+            <div className="min-w-0">
+                <h3 className="truncate font-medium text-black" title={product.name}>
+                    {product.name}
+                </h3>
+                <p className="truncate text-sm text-gray-500">{product.brand}</p>
             </div>
 
             <div className="flex">
